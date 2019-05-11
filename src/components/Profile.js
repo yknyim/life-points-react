@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import Todos from './Todos';
+import AddToDo from './AddToDo';
+import newId from '../utils';
 
 export class Profile extends Component {
     constructor(props) {
@@ -24,6 +26,7 @@ export class Profile extends Component {
             ]
     }
     }
+
     markComplete = (id) => {
         this.setState({ todos: this.state.todos.map(todo => {
             if(todo.id === id) {
@@ -31,6 +34,15 @@ export class Profile extends Component {
             }
             return todo;
         }) });
+    }
+
+    addToDo = (title) => {
+        const newTodo = {
+            id: newId(),
+            title,
+            completed: false
+        }
+        this.setState({ todos: [...this.state.todos, newTodo]})
     }
 
     delTodo = (id) => {
@@ -41,6 +53,7 @@ export class Profile extends Component {
         
         return (
         <div>
+            <AddToDo addToDo={this.addToDo}/>
             <Todos todos={this.state.todos} markComplete={this.markComplete} delTodo={this.delTodo} />
         </div>
         )
