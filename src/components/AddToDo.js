@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-export class AddTodo extends Component {
+export class AddToDo extends Component {
     state = {
         title: ''
     }
@@ -37,4 +37,4 @@ export class AddTodo extends Component {
     }
 }
 
-export default AddTodo;
+export default AddToDo;
