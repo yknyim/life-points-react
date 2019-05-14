@@ -5,9 +5,11 @@ export default function Rewards() {
     return (
         <div>
             Still in progress. T-T
-            <Link to='/profile'>Go to Profile</Link>
-            {' | '}
-            <Link to='/'>Go Home</Link>
+            <div>
+                <Link to='/profile'>Go to Profile</Link>
+                {' | '}
+                <Link to='/'>Go Home</Link>
+            </div>
         </div>
     );
 }
