@@ -5,6 +5,7 @@ import Profile from './components/Profile';
 import Home from './components/HomePage';
 import { Route } from 'react-router-dom';
 
+
 class App extends React.Component {
 
   render() {
@@ -15,6 +16,8 @@ class App extends React.Component {
       </div>
     );
   }
+
+  
 }
 
 export default App;
