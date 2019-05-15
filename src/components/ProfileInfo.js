@@ -19,7 +19,7 @@ export class ProfileInfo extends Component {
                     <div className="Stats">
                         <br />
                         <br />
-                        {`Level: ${this.state.level}`}
+                        {`Level: ${this.props.level}`}
                         <br />
                         <br />
                         {`Exp: ${this.props.completedCount}`}
