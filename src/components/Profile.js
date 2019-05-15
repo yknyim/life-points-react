@@ -26,11 +26,24 @@ export class Profile extends Component {
                     id: 3,
                     title: 'Laundry',
                     completed: false
+                },
+                {
+                    id: 4,
+                    title: 'Clean room',
+                    completed: false
+                },
+                {
+                    id: 5,
+                    title: 'Laundry',
+                    completed: false
                 }
             ],
-            exp: 0
+            exp: 0,
+            level: 1
     }
     }
+
+    
 
     markComplete = (id) => {
         this.setState({ todos: this.state.todos.map(todo => {
@@ -69,7 +82,8 @@ export class Profile extends Component {
         return (
         <div>
 
-            <ProfileInfo completedCount={this.state.exp}/>
+            <ProfileInfo completedCount={this.state.exp} level={this.state.level}/>
+            {`Level: ${this.state.level}`}
             <h3>Quests</h3>
             {/* <Link to='/rewards'>Rewards</Link> */}
             {/* {' | '} */}

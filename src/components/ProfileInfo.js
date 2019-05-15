@@ -7,10 +7,16 @@ export class ProfileInfo extends Component {
         this.state = {
             name: 'Samson',
             age: '107',
-            gender: 'not human',
-            level: 1,
+            gender: 'not human'
         }
     }
+
+    static levelUp = () => {
+        if(this.props.completedCount === 100) {
+            this.props.level += 1
+        }
+    }
+
     render() {
         return (
         
@@ -25,11 +31,13 @@ export class ProfileInfo extends Component {
             <br />
             {`Gender: ${this.state.gender}`}
             <br />
-            {`Level: ${this.state.level}`}
+            {`Level: ${this.props.level}`}
             <br />
             {`Exp: ${this.props.completedCount}`}
         </div>
         )
+
+    
     }
     
     // static addExp() {
