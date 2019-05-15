@@ -51,7 +51,11 @@ export class Profile extends Component {
     }
 
     delTodo = (id) => {
-        this.setState({ todos: [...this.state.todos.filter(todo => todo.id !== id)], exp: this.state.exp + 1 });
+        this.setState({ todos: [...this.state.todos.filter(todo => todo.id !== id)], exp: this.state.exp - 20 });
+    }
+
+    completedTodo = (id) => {
+        this.setState({ todos: [...this.state.todos.filter(todo => todo.id !== id)], exp: this.state.exp + 20 });
     }
 
     // addExp = () => {
@@ -71,7 +75,7 @@ export class Profile extends Component {
             {/* {' | '} */}
             {/* <Link to='/'>Log out</Link> */}
             <AddToDo addToDo={this.addToDo}/>
-            <Todos todos={this.state.todos} markComplete={this.markComplete} addExp={this.addExp} delTodo={this.delTodo} />
+            <Todos todos={this.state.todos} markComplete={this.markComplete} addExp={this.addExp} delTodo={this.delTodo} completedTodo={this.completedTodo}/>
 
         </div>
         )

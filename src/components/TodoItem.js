@@ -22,6 +22,8 @@ export class TodoItem extends Component {
                 { title }
                 {/* <button onClick={this.props.addExp.bind(this,id)}>Complete</button> */}
                 <button onClick={this.props.delTodo.bind(this, id)} style={btnStyle}>X</button>
+                <button onClick={this.props.completedTodo.bind(this, id)} style={btnStyle}>+</button>
+                
             </p>
             </div>
         )
