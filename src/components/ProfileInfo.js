@@ -7,12 +7,13 @@ export class ProfileInfo extends Component {
         this.state = {
             name: 'Samson',
             age: '107',
-            gender: 'not human'
+            gender: 'Not Human'
         }
     }
 
     render() {
         return (
+
             <div className="Profile">
                 <div className="ProfileBox">
                     <div className="ProfilePic"></div>
@@ -33,7 +34,6 @@ export class ProfileInfo extends Component {
                         <br />
                         {`Gender: ${this.state.gender}`}
                     </div>
-
                 </div>
             </div>
 
