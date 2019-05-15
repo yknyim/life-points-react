@@ -27,7 +27,8 @@ export class Profile extends Component {
                     title: 'Laundry',
                     completed: false
                 }
-            ]
+            ],
+            exp: 0
     }
     }
 
@@ -50,21 +51,27 @@ export class Profile extends Component {
     }
 
     delTodo = (id) => {
-        this.setState({ todos: [...this.state.todos.filter(todo => todo.id !== id)] });
+        this.setState({ todos: [...this.state.todos.filter(todo => todo.id !== id)], exp: this.state.exp + 1 });
     }
+
+    // addExp = () => {
+    //     this.setState({
+    //         exp: this.state.exp + 1
+    //     })
+    // }
 
     render() {
         
         return (
         <div>
 
-            <ProfileInfo />
+            <ProfileInfo completedCount={this.state.exp}/>
             <h3>Quests</h3>
             {/* <Link to='/rewards'>Rewards</Link> */}
             {/* {' | '} */}
             {/* <Link to='/'>Log out</Link> */}
             <AddToDo addToDo={this.addToDo}/>
-            <Todos todos={this.state.todos} markComplete={this.markComplete} delTodo={this.delTodo} />
+            <Todos todos={this.state.todos} markComplete={this.markComplete} addExp={this.addExp} delTodo={this.delTodo} />
 
         </div>
         )
