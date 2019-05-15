@@ -7,19 +7,20 @@ export class ProfileInfo extends Component {
         this.state = {
             name: 'Samson',
             age: '107',
-            gender: 'not human'
+            gender: 'Not Human'
         }
     }
 
     render() {
         return (
+
             <div className="Profile">
                 <div className="ProfileBox">
                     <div className="ProfilePic"></div>
                     <div className="Stats">
                         <br />
                         <br />
-                        {`Level: ${this.state.level}`}
+                        {`Level: ${this.props.level}`}
                         <br />
                         <br />
                         {`Exp: ${this.props.completedCount}`}
@@ -33,7 +34,6 @@ export class ProfileInfo extends Component {
                         <br />
                         {`Gender: ${this.state.gender}`}
                     </div>
-
                 </div>
             </div>
 
