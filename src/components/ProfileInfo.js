@@ -11,15 +11,8 @@ export class ProfileInfo extends Component {
         }
     }
 
-    static levelUp = () => {
-        if(this.props.completedCount === 100) {
-            this.props.level += 1
-        }
-    }
-
     render() {
-        return (
-        
+        return (      
         <div>
             <div style={{display: 'inline-block'}}>
             {`Name: ${this.state.name}`}
@@ -36,16 +29,7 @@ export class ProfileInfo extends Component {
             {`Exp: ${this.props.completedCount}`}
         </div>
         )
-
-    
     }
-    
-    // static addExp() {
-    //     console.log(Profile.state.todos.completed)
-    //     if(Profile.state.todos.completed === true) {
-    //         return this.state.level += 1
-    //     }
-    // }
 }
 
 export default ProfileInfo;

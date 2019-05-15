@@ -14,7 +14,7 @@ export class Profile extends Component {
             todos: [
                 {
                     id: 1,
-                    title: 'Do the dishes',
+                    title: 'Do The Dishes',
                     completed: false
                 },
                 {
@@ -29,12 +29,12 @@ export class Profile extends Component {
                 },
                 {
                     id: 4,
-                    title: 'Clean room',
+                    title: 'Clean Car',
                     completed: false
                 },
                 {
                     id: 5,
-                    title: 'Laundry',
+                    title: 'Cut Grass',
                     completed: false
                 }
             ],
@@ -77,12 +77,6 @@ export class Profile extends Component {
             })
         }
     }
-
-    // addExp = () => {
-    //     this.setState({
-    //         exp: this.state.exp + 1
-    //     })
-    // }
 
     render() {
         
