@@ -13,8 +13,8 @@
 }
 
 .ProfilePic {
-    height: 100px;
-    width: 100px;
+    height: 150px;
+    width: 150px;
     margin-left: 15px;
     padding: 5px;
     display: inline-block;
@@ -25,13 +25,13 @@
     content: url("profile.jpg");
 }
 
-.GeneralInfo {
-    margin-left: 200px;
+.GeneralInfo,
+.Stats {
+    margin-top: 1.5%;
+    margin-left: 10%;
 }
 
-.Stats {
-    margin-left: 200px;
-}
+
 
 
 

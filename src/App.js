@@ -12,7 +12,10 @@ class App extends React.Component {
   render() {
     return (
       <div>
-          <Header />
+          <div style={{ display: 'flex', justifyContent: 'center' }}>
+            <Header />
+          </div>
+          <h1 style={{ display: 'flex', justifyContent: 'center' }}>___________________________________________________</h1>
           <Profile />
         {/* <Route exact path='/' component={Home} /> */}
         {/* <Route path='/profile' component={Profile} /> */}
