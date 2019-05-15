@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Profile from './Profile';
+import '../styles/ProfileInfo.css';
 
 export class ProfileInfo extends Component {
     constructor(props) {
@@ -12,22 +12,31 @@ export class ProfileInfo extends Component {
     }
 
     render() {
-        return (      
-        <div>
-            <div style={{display: 'inline-block'}}>
-            {`Name: ${this.state.name}`}
+        return (
+            <div className="Profile">
+                <div className="ProfileBox">
+                    <div className="ProfilePic"></div>
+                    <div className="Stats">
+                        <br />
+                        <br />
+                        {`Level: ${this.state.level}`}
+                        <br />
+                        <br />
+                        {`Exp: ${this.props.completedCount}`}
+                    </div>
+                    <div className="GeneralInfo">
+                        {`Name: ${this.state.name}`}
+                        <br />
+                        <br />
+                        {`Age: ${this.state.age}`}
+                        <br />
+                        <br />
+                        {`Gender: ${this.state.gender}`}
+                    </div>
+
+                </div>
             </div>
-            <br />
-            <br />
-            {`Age: ${this.state.age}`}
-            <br />
-            <br />
-            {`Gender: ${this.state.gender}`}
-            <br />
-            {`Level: ${this.props.level}`}
-            <br />
-            {`Exp: ${this.props.completedCount}`}
-        </div>
+
         )
     }
 }
