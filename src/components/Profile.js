@@ -82,7 +82,6 @@ export class Profile extends Component {
         
         return (
         <div>
-
             <ProfileInfo completedCount={this.state.exp} level={this.state.level}/>
             <h3>Quests</h3>
             {/* <Link to='/rewards'>Rewards</Link> */}
@@ -90,7 +89,6 @@ export class Profile extends Component {
             {/* <Link to='/'>Log out</Link> */}
             <AddToDo addToDo={this.addToDo}/>
             <Todos todos={this.state.todos} markComplete={this.markComplete} addExp={this.addExp} delTodo={this.delTodo} completedTodo={this.completedTodo}/>
-
         </div>
         )
     }
