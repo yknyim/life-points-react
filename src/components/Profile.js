@@ -69,6 +69,13 @@ export class Profile extends Component {
 
     completedTodo = (id) => {
         this.setState({ todos: [...this.state.todos.filter(todo => todo.id !== id)], exp: this.state.exp + 20 });
+        if(this.state.exp === 80) {
+            this.setState({
+                todos: [...this.state.todos.filter(todo => todo.id !== id)],
+                level:this.state.level + 1,
+                exp: 0
+            })
+        }
     }
 
     // addExp = () => {
@@ -83,7 +90,6 @@ export class Profile extends Component {
         <div>
 
             <ProfileInfo completedCount={this.state.exp} level={this.state.level}/>
-            {`Level: ${this.state.level}`}
             <h3>Quests</h3>
             {/* <Link to='/rewards'>Rewards</Link> */}
             {/* {' | '} */}
