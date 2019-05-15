@@ -36,7 +36,7 @@ export class Profile extends Component {
             if(todo.id === id) {
                 todo.completed = !todo.completed
             }
-            return todo;
+            return todo
         }) });
     }
 
@@ -60,9 +60,9 @@ export class Profile extends Component {
 
             <ProfileInfo />
             <h3>Quests</h3>
-            <Link to='/rewards'>Rewards</Link>
-            {' | '}
-            <Link to='/'>Log out</Link>
+            {/* <Link to='/rewards'>Rewards</Link> */}
+            {/* {' | '} */}
+            {/* <Link to='/'>Log out</Link> */}
             <AddToDo addToDo={this.addToDo}/>
             <Todos todos={this.state.todos} markComplete={this.markComplete} delTodo={this.delTodo} />
 
