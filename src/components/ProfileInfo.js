@@ -1,25 +1,44 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import Profile from './Profile';
 
 export class ProfileInfo extends Component {
     constructor(props) {
         super(props);
         this.state = {
             name: 'Samson',
-            age: '99999',
+            age: '107',
             gender: 'not human',
+            level: 1,
+            exp: 0
         }
     }
     render() {
         return (
+        
         <div>
+            <div style={{display: 'inline-block'}}>
             {`Name: ${this.state.name}`}
+            </div>
+            <br />
             <br />
             {`Age: ${this.state.age}`}
             <br />
+            <br />
             {`Gender: ${this.state.gender}`}
+            <br />
+            {`Level: ${this.state.level}`}
+            <br />
+            {`Exp: ${this.state.exp}`}
         </div>
         )
     }
+
+    // static addExp() {
+    //     console.log(Profile.state.todos.completed)
+    //     if(Profile.state.todos.completed === true) {
+    //         return this.state.level += 1
+    //     }
+    // }
 }
 
 export default ProfileInfo;
