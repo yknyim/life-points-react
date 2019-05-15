@@ -14,7 +14,7 @@ export class Profile extends Component {
             todos: [
                 {
                     id: 1,
-                    title: 'Do the dishes',
+                    title: 'Do The Dishes',
                     completed: false
                 },
                 {
@@ -26,11 +26,24 @@ export class Profile extends Component {
                     id: 3,
                     title: 'Laundry',
                     completed: false
+                },
+                {
+                    id: 4,
+                    title: 'Clean Car',
+                    completed: false
+                },
+                {
+                    id: 5,
+                    title: 'Cut Grass',
+                    completed: false
                 }
             ],
-            exp: 0
+            exp: 0,
+            level: 1
     }
     }
+
+    
 
     markComplete = (id) => {
         this.setState({ todos: this.state.todos.map(todo => {
@@ -51,27 +64,32 @@ export class Profile extends Component {
     }
 
     delTodo = (id) => {
-        this.setState({ todos: [...this.state.todos.filter(todo => todo.id !== id)], exp: this.state.exp + 1 });
+        this.setState({ todos: [...this.state.todos.filter(todo => todo.id !== id)], exp: this.state.exp - 20 });
     }
 
-    // addExp = () => {
-    //     this.setState({
-    //         exp: this.state.exp + 1
-    //     })
-    // }
+    completedTodo = (id) => {
+        this.setState({ todos: [...this.state.todos.filter(todo => todo.id !== id)], exp: this.state.exp + 20 });
+        if(this.state.exp === 80) {
+            this.setState({
+                todos: [...this.state.todos.filter(todo => todo.id !== id)],
+                level:this.state.level + 1,
+                exp: 0
+            })
+        }
+    }
 
     render() {
         
         return (
         <div>
 
-            <ProfileInfo completedCount={this.state.exp}/>
+            <ProfileInfo completedCount={this.state.exp} level={this.state.level}/>
             <h3>Quests</h3>
             {/* <Link to='/rewards'>Rewards</Link> */}
             {/* {' | '} */}
             {/* <Link to='/'>Log out</Link> */}
             <AddToDo addToDo={this.addToDo}/>
-            <Todos todos={this.state.todos} markComplete={this.markComplete} addExp={this.addExp} delTodo={this.delTodo} />
+            <Todos todos={this.state.todos} markComplete={this.markComplete} addExp={this.addExp} delTodo={this.delTodo} completedTodo={this.completedTodo}/>
 
         </div>
         )

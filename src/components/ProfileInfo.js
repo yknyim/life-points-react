@@ -7,10 +7,10 @@ export class ProfileInfo extends Component {
         this.state = {
             name: 'Samson',
             age: '107',
-            gender: 'not human',
-            level: 1,
+            gender: 'not human'
         }
     }
+
     render() {
         return (
             <div className="Profile">
@@ -36,15 +36,9 @@ export class ProfileInfo extends Component {
 
                 </div>
             </div>
+
         )
     }
-    
-    // static addExp() {
-    //     console.log(Profile.state.todos.completed)
-    //     if(Profile.state.todos.completed === true) {
-    //         return this.state.level += 1
-    //     }
-    // }
 }
 
 export default ProfileInfo;
