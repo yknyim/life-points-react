@@ -9,7 +9,6 @@ export class ProfileInfo extends Component {
             age: '107',
             gender: 'not human',
             level: 1,
-            exp: 0
         }
     }
     render() {
@@ -28,11 +27,11 @@ export class ProfileInfo extends Component {
             <br />
             {`Level: ${this.state.level}`}
             <br />
-            {`Exp: ${this.state.exp}`}
+            {`Exp: ${this.props.completedCount}`}
         </div>
         )
     }
-
+    
     // static addExp() {
     //     console.log(Profile.state.todos.completed)
     //     if(Profile.state.todos.completed === true) {
