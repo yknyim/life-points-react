@@ -1,4 +1,4 @@
-let lastId = 3;
+let lastId = 5;
 
 export default function(prefix='id') {
     lastId++;
