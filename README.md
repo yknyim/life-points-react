@@ -1,5 +1,5 @@
 LEVEL UP
-User has an avitar. Add tasks to list and get exp for completing them! Does not save when refreshed!
+User has an avatar. Add tasks to list and get exp for completing them! Does not save when refreshed!
 
 Built with React
 
