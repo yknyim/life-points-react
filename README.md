@@ -1,8 +1,10 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+LEVEL UP
 User has an avitar. Add tasks to list and get exp for completing them! Does not save when refreshed!
 
 Built with React
 
+
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 ## Available Scripts
 
 In the project directory, you can run:
