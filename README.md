@@ -3,6 +3,7 @@ User has an avatar. Add tasks to list and get exp for completing them! Does not 
 
 Built with React
 
+<img src="/screenshots/Screen Shot 2019-06-02 at 12.13.23 PM.png">
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 ## Available Scripts
