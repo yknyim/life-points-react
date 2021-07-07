@@ -7,7 +7,7 @@ export class ProfileInfo extends Component {
         this.state = {
             name: 'Samson',
             age: '107',
-            gender: 'Not Human'
+            gender: 'Other'
         }
     }
 
@@ -17,14 +17,6 @@ export class ProfileInfo extends Component {
             <div className="Profile">
                 <div className="ProfileBox">
                     <div className="ProfilePic"></div>
-                    <div className="Stats">
-                        <br />
-                        <br />
-                        {`Level: ${this.props.level}`}
-                        <br />
-                        <br />
-                        {`Exp: ${this.props.completedCount}`}
-                    </div>
                     <div className="GeneralInfo">
                         {`Name: ${this.state.name}`}
                         <br />
@@ -33,6 +25,14 @@ export class ProfileInfo extends Component {
                         <br />
                         <br />
                         {`Gender: ${this.state.gender}`}
+                    </div>
+                    <div className="Stats">
+                        <br />
+                        <br />
+                        {`Level: ${this.props.level}`}
+                        <br />
+                        <br />
+                        {`Exp: ${this.props.completedCount}`}
                     </div>
                 </div>
             </div>
